@@ -1,0 +1,23 @@
+class Student:
+    def __init__(self, name, age, year, dept):
+        self.name = name
+        self.age = age
+        self.year = year
+        self.dept = dept
+        
+    def __str__(self):
+        return  f"Name : {self.name}, Age: {self.age}, year: {self.year}, department: {self.dept}"
+        
+class SVCT_Student:
+    def __init__(self, name, age, year, dept):
+        self.name = name
+        self.age = age
+        self.year = year
+        self.dept = dept
+        
+    def __str__(self):
+        return  f"Name : {self.name}, Age: {self.age}, year: {self.year}, department: {self.dept}"
+        
+s1 = Student("sandhyaa", 20, "final year", "ECE")
+s2 = SVCT_Student("sanyaa", 20, "final year", "ECE")
+print(s2)
