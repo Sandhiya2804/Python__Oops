@@ -1,0 +1,27 @@
+#Method overriding
+
+'''it allows a subclass to provide a specific implementation of a method that
+is already provided by its parent class  >>> same method, different class '''
+
+class Vehicles:
+    def start(self):
+        print("The vehicle is starting")
+
+class Car(Vehicles):
+    def start(self):
+        super().start()
+        print("The car is starting")
+
+class Bike(Vehicles):
+    def start(self):
+        super().start()
+        print("The bike is starting")
+
+def start_vehicle(Vehicles):
+    Vehicles.start()
+
+c = Car()
+b = Bike()
+
+start_vehicle(c)
+start_vehicle(b)
