@@ -1,0 +1,24 @@
+#Abstraction
+
+from abc import ABC , abstractmethod
+class Smartdevice(ABC):
+    def turn_on(self):
+        pass
+
+    def turn_off(Self):
+        pass
+
+class smartLight(Smartdevice):
+    def turn_on(self):
+        print("The smart light is turned off")
+
+    def turn_off(Self):
+        print("the smart light is turned off")
+
+def control_device(device: Smartdevice):
+    device.turn_on()
+    device.turn_off()
+
+light = smartLight()
+
+control_device(light)   
