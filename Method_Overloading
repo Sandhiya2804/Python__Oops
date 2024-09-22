@@ -1,0 +1,16 @@
+#method overloading 
+''' python does not support method overloading but we can achieve it using some simple
+functionalities using the default parameters'''
+
+class Calculator:
+    def add(self, a = None, b = None, c = None):
+        if a is not None and b is not None and c is not None:
+            return a + b + c
+        elif a is not None and b is not None:
+            return a + b
+        else:
+            return "Invalid parameter"
+        
+c1 = Calculator()
+print(c1.add(10, 45, 76))
+print(c1.add(90, 5))
