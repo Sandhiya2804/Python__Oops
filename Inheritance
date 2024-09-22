@@ -1,0 +1,43 @@
+class Library:
+    def __init__(self, title, publisher, genre):
+        self.title = title
+        self.publisher = publisher
+        self.genre = genre
+
+    def view_details(self):
+        print(f"Title: {self.title}, Publisher: {self.publisher}, Genre: {self.genre}")
+
+# Single Inheritance
+class Book(Library):
+    def __init__(self, title, publisher, genre, author, isbn):
+        super().__init__(title, publisher, genre)
+        self.author = author
+        self.isbn = isbn
+
+    def view_details(self):
+        # Calling parent class's view_details
+        super().view_details()
+        # Adding book-specific details
+        print(f"Author: {self.author}, ISBN: {self.isbn}")
+
+# Multiple Inheritance Example (not required here, but just for demonstration)
+class Ebook(Book):
+    def __init__(self, title, publisher, genre, author, isbn, file_format):
+        super().__init__(title, publisher, genre, author, isbn)
+        self.file_format = file_format
+
+    def view_details(self):
+        # Calling Book's view_details
+        super().view_details()
+        # Adding Ebook-specific details
+        print(f"File Format: {self.file_format}")
+
+# Book instance 
+print("Book Details:")
+b1 = Book("Way to Success", "The Success Publication", "Self-help", "Sandhiya", 123)
+b1.view_details()
+
+# Ebook instance 
+print("\nEBook Details:")
+e1 = Ebook("Digital Success", "E-Publishing", "Tech", "Rahul", 456, "PDF")
+e1.view_details()
